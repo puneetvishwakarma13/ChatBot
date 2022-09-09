@@ -1,5 +1,5 @@
 # for speech-to-text
-from SpeechRecognition import speech_recognition as sr
+from speech_recognition import speech_recognition as sr
 # for text-to-speech
 from gtts import gTTS
 # for language model
