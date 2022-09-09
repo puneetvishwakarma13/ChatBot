@@ -29,7 +29,7 @@ jobs:
         pip install flake8 pytest
         pip install tensorflow
         pip install transformers
-        pip intall gTTS
+        pip install gTTS
         pip install SpeechRecognition
         pip install Pyaudio
         
