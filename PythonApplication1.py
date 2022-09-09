@@ -19,11 +19,24 @@ class ChatBot():
              print("me --> ", self.text)
         except:
              print("me -->  ERROR")
+
     def wake_up(self, text):
         return True if self.name in text.lower() else False
+
+    @staticmethod
+    def text_to_speech(text):
+        print("AI --> ", text)
+        speaker = gTTS(text=text, lang="en", slow=False)
+        speaker.save("aud.mp3")
+        os.system("start aud.mp3")
+        os.remove("aud.mp3")
 
 # Execute the AI
 if __name__ == "__main__":
     ai = ChatBot(name="Anna")
     while True:
         ai.speech_to_text()
+
+        if ai.wake_up(ai.text) is True:
+             aud = "Hello I am Anna, what can I do for you?"
+             ai.text_to_speech(aud)
