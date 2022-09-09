@@ -31,7 +31,7 @@ jobs:
         pip install tensorflow
         pip install transformers
         pip install gTTS
-        pip install SpeechRecognition
+        pip3 install SpeechRecognition
         pip install Pyaudio
         pip install build
         
